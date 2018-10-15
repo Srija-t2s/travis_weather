@@ -1,0 +1,5 @@
+NodeJS Event loop is perhaps one of the most misunderstood concepts in node. Unfortunately most articles online are not helping. Until a few days ago I also had the wrong idea of how Event loop works thanks to Daniel Khan’s article. Daniel highlighted some of these misconceptions and also explained the realities. I will just point out the most popular below and you can go over Daniel’s article after and read everything in full.
+
+“The Event loop runs in a separate thread in the user code. There is a main thread where the JavaScript code of the user (userland code) runs in and another one that runs the event loop. Every time an asynchronous operation takes place, the main thread will hand over the work to the event loop thread and once it is done, the event loop thread will ping the main thread to execute a callback.” — This is WRONG
+
+This basically had been my own idea of Event loop, so I decided to do research and go deeper. In this article I will be explaining how everything happens with a general example.
